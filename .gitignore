@@ -1,0 +1,7 @@
+node_modules/
+build/
+*.env
+*.log
+coverage/
+.nyc_output
+logs/mails/

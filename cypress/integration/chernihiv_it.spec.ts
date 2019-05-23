@@ -16,7 +16,7 @@ describe("Chernhiv it", () => {
     cy.scrollToSection("Speakers");
     cy.contains("h2", "SPEAKERS");
 
-    cy.get("#speakers .speakers__speaker > img").should("have.length", 6);
+    cy.get("#speakers .speackers__speaker > img").should("have.length", 6);
     cy.get("#speakers")
       .should("contain", "Борис Могила")
       .should("contain", "Сергій Бабіч")
