@@ -1,4 +1,4 @@
-describe("Chernhiv it", () => {
+describe("Chernihiv it", () => {
   before(() => {
     cy.visit("https://chernihiv.it/conference2019/");
   });
@@ -7,7 +7,7 @@ describe("Chernhiv it", () => {
     cy.contains("p", "Chernihiv.IT");
   });
 
-  it("Has about section", () => {
+  it("Shows about", () => {
     cy.scrollToSection("About");
     cy.contains("h2", "ABOUT");
   });
@@ -16,14 +16,14 @@ describe("Chernhiv it", () => {
     cy.scrollToSection("Speakers");
     cy.contains("h2", "SPEAKERS");
 
-    cy.get("#speakers .speackers__speaker > img").should("have.length", 6);
+    cy.get("#speakers .speakers__speaker > img").should("have.length", 6);
     cy.get("#speakers")
       .should("contain", "Борис Могила")
       .should("contain", "Сергій Бабіч")
       .should("contain", "Євгеній Сафронов")
       .should("contain", "Дмитро Коваленко")
       .should("contain", "Богдан Шульга")
-      .should("contain", "Рудольф Фенцик")
+      .should("contain", "Рудольф Фенцик");
   });
 
   it("Shows program", () => {
@@ -115,10 +115,14 @@ describe("Chernhiv it", () => {
     });
 
     it("Shows buy tickets button", () => {
-      cy.get('#tickets a')
-        .contains('BUY TICKETS')  
-        .should('be.visible')
-        .should('have.attr', 'href', 'https://chernihivitconf2019.ticketforevent.com/')
-    })
+      cy.get("#tickets a")
+        .contains("BUY TICKETS")
+        .should("be.visible")
+        .should(
+          "have.attr",
+          "href",
+          "https://chernihivitconf2019.ticketforevent.com/"
+        );
+    });
   });
 });
